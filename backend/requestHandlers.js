@@ -1,10 +1,15 @@
 const mysqlHandler = require('./databaseHandler.js')
 
 module.exports = {
-  getNotes
+  fetchNotes,
+  createNote
 }
 
 
-function getNotes() {
-  mysqlHandler.fetchNotes()  
+function fetchNotes() {
+  return mysqlHandler.fetchNotes()  
+}
+
+function createNote( note ) {
+  mysqlHandler.createNote( note )  
 }
